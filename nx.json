@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -34,8 +37,34 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/api-e2e/**/*"]
+      "exclude": [
+        "apps/api-e2e/**/*"
+      ]
+    },
+    {
+      "plugin": "@nxrocks/nx-flutter",
+      "options": {
+        "analyzeTargetName": "analyze",
+        "cleanTargetName": "clean",
+        "formatTargetName": "format",
+        "testTargetName": "test",
+        "doctorTargetName": "doctor",
+        "assembleTargetName": "assemble",
+        "attachTargetName": "attach",
+        "driveTargetName": "drive",
+        "genL10nTargetName": "gen-l10n",
+        "installTargetName": "install",
+        "runTargetName": "run",
+        "buildAarTargetName": "build-aar",
+        "buildApkTargetName": "build-apk",
+        "buildAppbundleTargetName": "build-appbundle",
+        "buildBundleTargetName": "build-bundle",
+        "buildIosTargetName": "build-ios",
+        "buildIosFrameworkTargetName": "build-ios-framework",
+        "buildIpaTargetName": "build-ipa"
+      }
     }
   ],
-  "nxCloudAccessToken": "MjRlZWIyNTctODI5MC00N2MwLTk4Y2EtYjQ0NjNjZWMyOGVlfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MjRlZWIyNTctODI5MC00N2MwLTk4Y2EtYjQ0NjNjZWMyOGVlfHJlYWQtd3JpdGU=",
+  "targetDefaults": {}
 }
